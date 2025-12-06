@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  twitter-sentiment:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./model/data:/app/model/data
+      - ./model/artifacts:/app/model/artifacts
+    environment:
+      - PYTHONUNBUFFERED=1
+    restart: unless-stopped
