@@ -1,0 +1,12 @@
+# Virtual environment folders
+/etc
+/bin
+/lib
+/share
+/include
+
+*.py
+!predict.py
+
+# Jupyter notebook checkpoints
+.ipynb_checkpoints
